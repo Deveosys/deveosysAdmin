@@ -1,6 +1,6 @@
 # DeveosysAdmin
 
-**DeveosysAdmin** is based on top of EasyAdmin.
+**DeveosysAdmin** is based on top of EasyAdmin and FOSUserBundle.
 
 It brings boilerplate code for users management and bootstrap 4 integration.
 
@@ -10,7 +10,7 @@ Development in progress...
 
 ### Packages
 
-Install symfony/templating for FOSUserBundle dependencies : 
+Install symfony/templating for FOSUserBundle dependency : 
 ```
 $ composer require symfony/templating
 ```
@@ -25,7 +25,7 @@ framework:
 
 Add DeveosysAdmin Package :
 ```
-$ composer require deveosys/deveosys_admin
+$ composer require deveosys/deveosys_admin "dev-master"
 ```
 
 Activate the bundles in app/AppKernel.php
@@ -164,6 +164,36 @@ security:
         - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin/, role: ROLE_ADMIN }
+```
+
+Set the mailer_user parameter in app/config/parameter.yml
+```
+mailer_user: your@mail.com
+```
+
+Activate translation in app/config/config.yml :
+```
+framework:
+    ...
+    translator: { fallbacks: [ '%locale%' ] }
+```
+
+### Assets
+
+Install assets : 
+```
+php bin/console assets:install
+``` 
+### Update database
+
+We recommend that you use DoctrineMigrationsBundle : 
+```
+php bin/console doctrine:migrations:diff
+php bin/console doctrine:migrations:migrate
+```
+Otherwise : 
+```
+php bin/console doctrine:schema:update --force
 ```
 
 ## License
