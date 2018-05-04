@@ -11,7 +11,7 @@
                     </h1>
                 {% endif %}
                 {% if deveosys_admin_getConfig().login.logo %}
-                    <img style="width: 125px;" class="mx-auto mt-3 mb-5" src="{{ asset(deveosys_admin_getConfig().login.logo) }}">
+                    <img style="width: {{ deveosys_admin_getConfig().login.logo.size }}px;" class="mx-auto mt-2 mb-5" src="{{ asset(deveosys_admin_getConfig().login.logo.path) }}">
                 {% endif %}
 
                 {% if error %}

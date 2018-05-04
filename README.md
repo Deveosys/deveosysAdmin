@@ -81,9 +81,9 @@ easy_admin:
             field_toggle: 'DeveosysAdminBundle:easy_admin:field_toggle.html.twig'
         assets:
             css:
-                - 'bundles/deveosysadmin/global.css'
+                - 'bundles/deveosysadmin/dist/global.css'
             js:
-                - 'bundles/deveosysadmin/app.js'
+                - 'bundles/deveosysadmin/dist/app.js'
         menu:
             - { label: 'Dashboard', route: 'admin_dashboard', default: true, icon: 'tachometer' }
             - { entity: 'User', icon: 'users' }

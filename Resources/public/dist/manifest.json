@@ -1,0 +1,9 @@
+{
+  "/app.js": "/bundles/deveosysadmin/dist/app.js",
+  "/fonts/fontawesome-webfont.eot": "/bundles/deveosysadmin/dist/fonts/fontawesome-webfont.674f50d2.eot",
+  "/fonts/fontawesome-webfont.ttf": "/bundles/deveosysadmin/dist/fonts/fontawesome-webfont.b06871f2.ttf",
+  "/fonts/fontawesome-webfont.woff": "/bundles/deveosysadmin/dist/fonts/fontawesome-webfont.fee66e71.woff",
+  "/fonts/fontawesome-webfont.woff2": "/bundles/deveosysadmin/dist/fonts/fontawesome-webfont.af7ae505.woff2",
+  "/global.css": "/bundles/deveosysadmin/dist/global.css",
+  "/images/fontawesome-webfont.svg": "/bundles/deveosysadmin/dist/images/fontawesome-webfont.912ec66d.svg"
+}

@@ -21,6 +21,7 @@ class Configuration implements ConfigurationInterface
         $rootNode = $treeBuilder->root('deveosys_admin');
 
         $rootNode
+            ->addDefaultsIfNotSet()
             ->children()
                 ->arrayNode('login')
                     ->children()
@@ -28,9 +29,18 @@ class Configuration implements ConfigurationInterface
                             ->defaultValue('Deveosys')
                             ->info('The name displayed in the login section.')
                         ->end()
-                        ->scalarNode('logo')
-                            ->defaultValue('bundles/deveosysadmin/images/logo.png')
-                            ->info('Image displayed in the login section.')
+                        ->arrayNode('logo')
+                        ->addDefaultsIfNotSet()
+                            ->children()
+                                ->scalarNode('path')
+                                    ->defaultValue('bundles/deveosysadmin/images/logo-green.png')
+                                    ->info('The name displayed in the login section.')
+                                ->end()
+                                ->integerNode('size')
+                                    ->defaultValue(100)
+                                    ->info('The image with in pixels.')
+                                ->end()
+                            ->end()
                         ->end()
                     ->end()
                 ->end() // login
