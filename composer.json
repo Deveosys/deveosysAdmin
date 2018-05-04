@@ -1,0 +1,46 @@
+{
+    "name": "deveosys/deveosys_admin",
+    "type": "symfony-bundle",
+    "description": "Admin generator for Symfony applications",
+    // "keywords": ["backend", "admin", "generator"],
+    "homepage": "https://github.com/Deveosys/deveosysAdmin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Olivier Deveosys",
+            "email": "contact@deveosys.com"
+        }
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Deveosys\\AdminBundle\\": ""
+        }
+    },
+    "require": {
+        "php": ">=5.5.9",
+        "doctrine/doctrine-bundle": "^1.6",
+        "doctrine/doctrine-migrations-bundle": "^1.0",
+        "doctrine/orm": "^2.5",
+        "easycorp/easyadmin-bundle": "^1.17",
+        "friendsofsymfony/user-bundle": "^2.1",
+        "incenteev/composer-parameter-handler": "^2.0",
+        "sensio/distribution-bundle": "^5.0.19",
+        "sensio/framework-extra-bundle": "^5.0.0",
+        "symfony/monolog-bundle": "^3.1.0",
+        "symfony/polyfill-apcu": "^1.0",
+        "symfony/swiftmailer-bundle": "^2.6.4",
+        "symfony/symfony": "3.4.*",
+        "symfony/templating": "^4.0",
+        "twig/twig": "^1.0||^2.0"
+    },
+    "require-dev": {
+        "sensio/generator-bundle": "^3.0",
+        "symfony/phpunit-bridge": "^3.0"
+    },
+    "extra": {
+        "branch-alias": null
+    }
+}

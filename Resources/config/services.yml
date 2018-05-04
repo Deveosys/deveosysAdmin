@@ -1,0 +1,13 @@
+services:
+    deveosys_admin.manager.config:
+        class: Deveosys\AdminBundle\Utils\ConfigManager
+        arguments:
+            - ~
+
+    deveosys_admin.twig.config:
+        class: Deveosys\AdminBundle\Twig\ConfigExtension
+        public: false
+        arguments:
+            - '@deveosys_admin.manager.config'
+        tags:
+            - { name: twig.extension }

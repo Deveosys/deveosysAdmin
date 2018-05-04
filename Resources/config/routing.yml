@@ -1,0 +1,11 @@
+deveosys_admin_bundle:
+    resource: '@DeveosysAdminBundle/Controller/'
+    type: annotation
+
+easy_admin_bundle:
+    resource: "@EasyAdminBundle/Controller/AdminController.php"
+    type:     annotation
+    prefix:   /admin
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
