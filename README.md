@@ -1,4 +1,4 @@
-#DeveosysAdmin
+# DeveosysAdmin
 
 **DeveosysAdmin** is based on top of EasyAdmin.
 
@@ -6,9 +6,9 @@ It brings boilerplate code for users management and bootstrap 4 integration.
 
 Development in progress...
 
-##Installation
+## Installation
 
-###Packages
+### Packages
 
 Install symfony/templating for FOSUserBundle dependencies : 
 ```
@@ -50,7 +50,7 @@ class AppKernel extends Kernel
 
 ```
 
-###Routing
+### Routing
 
 Import routing in your app/config/routing.yml :
 >It already imports routes from EasyAdminBundle and FOSUserBundle
@@ -61,7 +61,7 @@ deveosys_admin:
     prefix:   /
 ```
 
-###Configuration
+### Configuration
 
 Create a deveosysAdmin.yml file in app/config :
 >or paste the following directly in app/config/config.yml
@@ -166,7 +166,7 @@ security:
         - { path: ^/admin/, role: ROLE_ADMIN }
 ```
 
-##License
+## License
 
 This software is published under the [MIT License](LICENSE.md)
 
