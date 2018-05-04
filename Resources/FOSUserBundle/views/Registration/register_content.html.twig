@@ -1,0 +1,30 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 col-lg-5 mx-auto">
+			<div class="card mt-5 p-4">
+
+				{% if deveosys_admin_getConfig().login.title %}
+                    <h1 class="text-center">
+                        {{ deveosys_admin_getConfig().login.title }}
+                    </h1>
+                {% endif %}
+                {% if deveosys_admin_getConfig().login.logo %}
+                    <img style="width: 125px;" class="mx-auto mt-3 mb-5" src="{{ asset(deveosys_admin_getConfig().login.logo) }}">
+                {% endif %}
+                
+				{{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+				    {{ form_widget(form) }}
+				    <div class="mt-4">
+				        <input class="btn btn-block btn-primary" type="submit" value="{{ 'registration.submit'|trans }}" />
+				    </div>
+
+				{{ form_end(form) }}
+			</div>
+		</div>
+	</div>
+</div>
+

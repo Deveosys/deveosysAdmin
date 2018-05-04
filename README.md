@@ -196,6 +196,16 @@ Otherwise :
 php bin/console doctrine:schema:update --force
 ```
 
+## FOSUserBundle Login and Registration templates overriding
+
+So far, standard FOSUserBundle templates are used for these pages. DeveosysAdminBundle can provide improved templates integrating bootstrap 4 that you can easily modify at your convenience in app/Resources/FOSUserBundle.
+
+To generate it : 
+
+```
+php bin/console deveosys:install:fosuser_templates
+``` 
+
 ## License
 
 This software is published under the [MIT License](LICENSE.md)
