@@ -2,7 +2,7 @@
     "name": "deveosys/deveosys_admin",
     "type": "symfony-bundle",
     "description": "Admin generator for Symfony applications",
-    // "keywords": ["backend", "admin", "generator"],
+    "keywords": ["deveosys"],
     "homepage": "https://github.com/Deveosys/deveosysAdmin",
     "license": "MIT",
     "authors": [
