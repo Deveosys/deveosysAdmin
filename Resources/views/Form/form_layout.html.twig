@@ -92,7 +92,7 @@
 
 {% block datetime_widget -%}
     {% if widget == 'single_text' %}
-        {{- block('form_widget_simple') -}}
+        {{- block('form_widget_datepicker') -}}
     {% else -%}
         {% set attr = attr|merge({class: (attr.class|default('') ~ ' form-inline')|trim}) -%}
         <div {{ block('widget_container_attributes') }}>
@@ -607,3 +607,15 @@
         {% endif %}
     </div>
 {% endblock easyadmin_section_row %}
+
+{% block form_widget_datepicker %}
+    <div class="form-group">
+        <div class="input-group date tempusdominus-datetimepicker" id="{{ id }}_datetimepicker" data-target-input="nearest">
+            {%- set attr = attr|merge({class: (attr.class|default('') ~ ' form-control datetimepicker-input')|trim}) -%}
+            <input type="text" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %} data-target="#{{ id }}_datetimepicker"/>
+            <div class="input-group-append" data-target="#{{ id }}_datetimepicker" data-toggle="datetimepicker">
+                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
