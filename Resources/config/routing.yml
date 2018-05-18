@@ -3,7 +3,7 @@ deveosys_admin_bundle:
     type: annotation
 
 easy_admin_bundle:
-    resource: "@EasyAdminBundle/Controller/AdminController.php"
+    resource: "@DeveosysAdminBundle/Controller/AdminController.php"
     type:     annotation
     prefix:   /admin
 
