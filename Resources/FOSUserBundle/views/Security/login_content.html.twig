@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-lg-5 mx-auto pt-5">
-            <div class="card mt-5 p-4 security-from">
+            <div class="card mt-5 p-4">
 
                 {% if deveosys_admin_getConfig().login.title %}
                     <h1 class="text-center">
@@ -40,7 +40,9 @@
                     </div>
 
                     <input class="btn btn-block btn-primary mt-4" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+
                 </form>
+                <a class="mt-2 btn btn-block btn-light" href="{{ path('fos_user_registration_register') }}">{{ 'registration.submit'|trans }}</a>
             </div>
         </div>
     </div>

@@ -3,17 +3,17 @@
 {% form_theme form 'bootstrap_4_layout.html.twig' %}
 
 <div class="container">
-	<div class="row">
-		<div class="col-md-8 col-lg-5 mx-auto">
-			<div class="card mt-5 p-4">
+    <div class="row">
+        <div class="col-md-8 col-lg-5 mx-auto pt-5">
+            <div class="card mt-5 p-4">
 
-				{% if deveosys_admin_getConfig().login.title %}
+                {% if deveosys_admin_getConfig().login.title %}
                     <h1 class="text-center">
                         {{ deveosys_admin_getConfig().login.title }}
                     </h1>
                 {% endif %}
                 {% if deveosys_admin_getConfig().login.logo %}
-                    <img style="width: 125px;" class="mx-auto mt-3 mb-5" src="{{ asset(deveosys_admin_getConfig().login.logo) }}">
+                    <img style="width: {{ deveosys_admin_getConfig().login.logo.size }}px;" class="mx-auto mt-2 mb-5" src="{{ asset(deveosys_admin_getConfig().login.logo.path) }}">
                 {% endif %}
                 
 				{{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
@@ -21,8 +21,9 @@
 				    <div class="mt-4">
 				        <input class="btn btn-block btn-primary" type="submit" value="{{ 'registration.submit'|trans }}" />
 				    </div>
-
 				{{ form_end(form) }}
+
+				<a class="mt-2 btn btn-block btn-light" href="{{ path('fos_user_security_login') }}">{{ 'security.login.submit'|trans }}</a>
 			</div>
 		</div>
 	</div>
